@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斗地主 · 知识卡片</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf3eb;
+            font-family: 'Georgia', '宋体', 'Times New Roman', serif;
+            color: #3e2f28;
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 820px;
+            width: 100%;
+            background: #fffcf8;
+            padding: 50px 45px;
+            border-radius: 28px;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.03), 0 2px 8px rgba(90, 65, 50, 0.06);
+            transition: box-shadow 0.2s;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #4d3528;
+            border-bottom: 2px solid #e5d5c8;
+            padding-bottom: 10px;
+            margin-bottom: 28px;
+        }
+
+        h1 small {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #9f887c;
+            margin-left: 12px;
+            letter-spacing: 1px;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            background: #eee6dd;
+            padding: 18px 26px;
+            border-radius: 40px 12px 40px 12px;
+            margin-bottom: 32px;
+            color: #3a2b20;
+            quotes: "“" "”";
+            font-style: italic;
+            border-left: 4px solid #b7a192;
+        }
+
+        .lead::before {
+            content: "“";
+            font-size: 2rem;
+            color: #8b6f5b;
+            margin-right: 6px;
+        }
+
+        .lead::after {
+            content: "”";
+            font-size: 2rem;
+            color: #8b6f5b;
+            margin-left: 6px;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            text-align: justify;
+        }
+
+        .inset-box {
+            background: #f6efe9;
+            border-left: 6px solid #b3947e;
+            padding: 22px 28px;
+            border-radius: 0 18px 18px 0;
+            margin: 32px 0;
+            font-size: 0.98rem;
+        }
+
+        .inset-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 32px;
+            margin: 36px 0 28px;
+        }
+
+        .feature-item {
+            flex: 1 1 180px;
+            background: #fbf6f1;
+            padding: 16px 18px;
+            border-radius: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e8dbd1;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #634c3b;
+            margin-bottom: 6px;
+            border-bottom: 1px dashed #dacbc0;
+            padding-bottom: 4px;
+        }
+
+        .feature-item span {
+            font-size: 0.95rem;
+            color: #4d3b2f;
+        }
+
+        .quote-block {
+            background: #f2e8df;
+            padding: 20px 26px;
+            border-radius: 30px 8px 30px 8px;
+            margin: 30px 0 20px;
+            color: #3d2d21;
+            font-size: 0.98rem;
+        }
+
+        .quote-block cite {
+            display: block;
+            margin-top: 12px;
+            font-style: normal;
+            font-size: 0.88rem;
+            color: #7c685a;
+            text-align: right;
+        }
+
+        a {
+            color: #7a5d49;
+            text-decoration: none;
+            border-bottom: 1px dotted #bda99a;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #4f3627;
+            border-bottom: 1px solid #7a5d49;
+        }
+
+        .faq-mini {
+            margin-top: 40px;
+            border-top: 1px solid #e2d3c8;
+            padding-top: 26px;
+        }
+
+        .faq-mini details {
+            margin-bottom: 14px;
+            background: transparent;
+            padding: 8px 14px;
+            border-radius: 40px;
+            transition: background 0.2s;
+        }
+
+        .faq-mini details[open] {
+            background: #f2eae3;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #543f30;
+            list-style: disclosure-closed inside;
+        }
+
+        .faq-mini details[open] summary {
+            list-style: disclosure-open inside;
+        }
+
+        .faq-mini p {
+            margin: 10px 0 6px 20px;
+            font-size: 0.95rem;
+        }
+
+        .footer-note {
+            margin-top: 48px;
+            padding-top: 18px;
+            border-top: 1px solid #e2d3c8;
+            font-size: 0.9rem;
+            color: #786457;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .lead {
+                font-size: 1.1rem;
+                padding: 14px 18px;
+            }
+            .feature-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>斗地主 <small>牌局 · 对照 · 笔记</small></h1>
+
+    <div class="lead">
+        不是每局都需要王炸，但每手牌都值得被认真翻阅。
+    </div>
+
+    <p>
+        翻开任何一本民间牌戏笔记，<a href="https://app-doudizhu.com">斗地主</a>几乎都会出现在「入门与进阶」的章节。它的结构并不复杂：一副牌、三个人、十七张手牌、三张底牌，叫牌与对抗在瞬间完成。但真正把这种游戏当作日常观察对象之后，你会发现它的逻辑层次远不止「谁先出完谁赢」这么简单。
+    </p>
+
+    <p>
+        很多人在茶余饭后随手开一局，并不会刻意记录牌型分布或胜率变动。然而正是这种「随意」暴露了游戏最有趣的一面——每次发牌都是一次小型概率实验，每一次出牌选择背后都藏着对剩余牌张的模糊推算。如果你习惯在每局结束后花十秒钟回顾一下关键回合，对牌感的提升往往比多打十局更有效。
+    </p>
+
+    <div class="inset-box">
+        <p><strong>一种日常对照方法：</strong> 把自己当作第三方，记录自己「叫地主」后第一手出牌的牌型，再对比对手的应对方式。连续记录十局，你会发现某些模式反复出现——例如底牌带有对子时，地主的首攻往往偏向单张调整。这些细微对照比单纯依靠运气更有延伸阅读的价值。</p>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-item">
+            <strong>牌型分类</strong>
+            <span>单张、对子、三带、顺子、连对、飞机、炸弹、火箭。每一种组合都对应不同的剩余牌力估算方式。</span>
+        </div>
+        <div class="feature-item">
+            <strong>叫牌权重</strong>
+            <span>手牌中炸弹数量、2和王的总数、底牌补强预期——三者共同影响叫地主决策，而非单纯看大牌多少。</span>
+        </div>
+        <div class="feature-item">
+            <strong>出牌节奏</strong>
+            <span>先出小牌试探，还是直接用大牌争取牌权？不同节奏对应不同的控场思路，也影响农民之间的配合信号。</span>
+        </div>
+    </div>
+
+    <div class="quote-block">
+        记牌不是背牌，而是理解剩余牌张的分布可能性。当你把「外面还剩几张2」变成「外面可能还有两张2，位置在左或右」，思路就自然打开了。
+        <cite>—— 摘自《民间牌戏阅读笔记·斗地主篇》</cite>
+    </div>
+
+    <p>
+        基于这种视角，<a href="https://app-doudizhu.com">斗地主</a>已经超越单纯的消遣，变成一种可被拆解、对照、再组合的知识载体。不同地区的规则微调（例如是否允许三带二、春天翻倍计算方式）更是为这种「纸面推演」提供了丰富的变体素材。你不需要成为高手，只需要保持好奇，把每一局当作一次微型田野调查。
+    </p>
+
+    <div class="faq-mini">
+        <details>
+            <summary>为什么说「延伸阅读」有助于提高牌感？</summary>
+            <p>单纯的对局容易陷入路径依赖。阅读不同牌型结构分析、叫牌概率拆解，甚至其他棋牌游戏的决策逻辑，都能反过来帮你发现自己在斗地主中的盲点。例如桥牌中的「赢墩估算」思路就可以移植到斗地主的牌力评估中。</p>
+        </details>
+        <details>
+            <summary>记录牌局的最佳时机是什么？</summary>
+            <p>建议每局结束后立即记录关键手牌和胜负原因，间隔超过三分钟细节就会模糊。可以只记三行：底牌、自己首攻、对手最后一次接牌。连续记录20局后回顾，规律会自然浮现。</p>
+        </details>
+        <details>
+            <summary>是否需要掌握所有地区规则？</summary>
+            <p>不需要，选择一到两种主流规则（例如经典叫地主、不洗牌模式）深入熟悉即可。规则只是框架，真正有趣的是框架下的排列组合。</p>
+        </details>
+    </div>
+
+    <div class="footer-note">
+        一份从日常查询和对照出发的阅读笔记 · 不追求必胜，只追求清晰
+    </div>
+</div>
+</body>
+</html>
